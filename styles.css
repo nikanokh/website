@@ -1,0 +1,201 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: grid;
+    grid-template-areas: 
+        "header header"
+        "article article"
+        "footer footer";
+    grid-template-columns: 1fr 4fr; 
+    grid-template-rows: auto 1fr auto; 
+    height: 100vh; 
+}
+
+.header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.header {
+    background: linear-gradient(to right, #4CAF50, #2E7D32); /* Градиентный фон */
+    color: white; /* Цвет текста */
+    padding: 20px 0; /* Отступы сверху и снизу */
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина контейнера */
+    margin: 0 auto; /* Центрирование контейнера */
+    display: flex; /* Использование flexbox для выравнивания */
+    justify-content: space-between; /* Распределение элементов */
+    align-items: center; /* Вертикальное выравнивание */
+    padding: 0 20px; /* Отступы по бокам */
+}
+
+.logo {
+    font-size: 2.5em; /* Размер шрифта для логотипа */
+    font-weight: bold; /* Жирный шрифт */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для текста */
+}
+
+.navbar ul {
+    list-style: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    margin: 0; /* Убираем отступы */
+    display: flex; /* Использование flexbox для навигации */
+}
+
+.navbar li {
+    margin-left: 30px; /* Отступы между элементами навигации */
+}
+
+.navbar a {
+    color: white; /* Цвет текста ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-size: 1.2em; /* Размер шрифта для ссылок */
+    transition: color 0.3s; /* Плавный переход цвета */
+}
+
+.navbar a:hover {
+    color: #FFD700; /* Цвет при наведении */
+}
+
+.article {
+    grid-area: article;
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+.stack {
+    display: grid;
+    grid-template-columns: 100%;
+    /* grid-auto-rows: minmax(400px, auto); */
+}
+
+.locality {
+    /* padding: 1em;
+    margin: 1em;
+    background-color: grey;
+    min-height: 400px; */
+
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #4CAF50;
+}
+
+.list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+}
+
+.tourCard {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s;
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+    aspect-ratio: 2 / 3;
+}
+
+.tourCard:hover {
+    transform: scale(1.1);
+}
+
+.picture {
+    height: 45%; 
+    overflow: hidden; 
+}
+
+.picture img {
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #4CAF50;
+}
+
+.headline {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 15px 0;
+    color: #333;
+}
+
+.description {
+    display: block;
+    font-size: 0.9em;
+    color: #666;
+    padding: 0 15px;
+    margin-bottom: 15px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: #2E7D32;
+    color: white;
+    padding: 40px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.about, .contact, .social {
+    flex: 1;
+    margin: 0 20px;
+}
+
+.footer h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.footer p {
+    margin-bottom: 10px;
+}
+
+.social-link {
+    color: white;
+    text-decoration: none;
+    margin-right: 15px;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    color: #FFD700;
+}
