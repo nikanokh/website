@@ -39,10 +39,70 @@ header .container {
     padding: 0 20px; 
 }
 
+.button {
+    inline-size: 100%;
+    padding: 0.5lh 1.5lh;
+    font: inherit;
+    color: currentColor;
+    background-color: #f28482;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button:hover,
+  .button:focus-visible {
+    background-color: #f5cac3;
+  }
+  
+  .menu {
+    position: relative;
+    display: grid;
+    margin-block-start: 0.5lh;
+    background-color: #f28482;
+  
+    overflow: hidden;
+    line-height: 0;
+    color: transparent;
+    transition: line-height 0.5s, color 0.5s;
+  }
+  
+  .menu-item {
+    overflow: hidden;
+  }
+  
+  .menu-link {
+    display: block;
+    padding: 0.5lh 80px;
+  }
+  
+  .menu-link:hover,
+  .menu-link:focus-visible {
+    background-color: #f5cac3;
+  }
+  
+  .button.active ~ .menu {
+    line-height: 1.2;
+    color: currentColor;
+  }
+
 .logo {
     font-size: 2.5em; 
     font-weight: bold; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
+}
+
+.menu-toggle {
+    display: none; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+@media (max-width: 600px) {
+    
 }
 
 .navbar ul {
@@ -122,6 +182,9 @@ h3 {
 }
 
 @media (max-width: 600px) {
+    .body {
+        width: 100%;
+    }
     .list {
         display: grid;
         grid-template-columns: 1fr; 

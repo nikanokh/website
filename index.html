@@ -7,17 +7,28 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <button class="button" aria-expanded="false" aria-controls="list">Меню</button>
+            <nav>
+                <ul class="menu" id="list" aria-hidden="true">
+                    <li class="menu-item">
+                        <a href="#about" class="menu-link" tabindex="-1">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#tours" class="menu-link" tabindex="-1">Туры</a>
+                    </li>
+                    <li>
+                        <a href="#destinations" class="menu-link" tabindex="-1">Направления</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="menu-link" tabindex="-1">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+
     <header class="header">
         <div class="container">
             <h1 class="logo">Вокруг Света</h1>
-            <nav class="navbar">
-                <ul>
-                    <li><a href="#about">О нас</a></li>
-                    <li><a href="#tours">Туры</a></li>
-                    <li><a href="#destinations">Направления</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+            
         </div>
     </header>
     <article class="article">
@@ -135,6 +146,19 @@
             </div>
         </div>
     </footer>
+    <script type="text/javascript">
+        const button = document.querySelector('.button');
+        const menu = document.querySelector('.menu');
+        const menuLinks = document.querySelectorAll('.menu-link');
+
+        button.addEventListener('click', () => {
+            button.classList.toggle('active');
+            const isActive = button.classList.contains('active');
+            button.setAttribute('aria-expanded', isActive);
+            menu.setAttribute('aria-hidden', !isActive);
+            menuLinks.forEach(link => link.setAttribute('tabindex', isActive ? '0' : '-1'));
+        });
+    </script>
 </body>
 </html>
 
