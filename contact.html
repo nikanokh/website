@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Вокруг Света</h1>
+            <div class="navig">
+                <button class="button" aria-expanded="false" aria-controls="list">Меню</button>  
+                <ul class="menu" id="list" aria-hidden="true">
+                    <li class="menu-item">
+                        <a href="index.html" class="menu-link" tabindex="-1">Главная</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="tours.html" class="menu-link" tabindex="-1">Туры</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="contact.html" class="menu-link" tabindex="-1">Контакты</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="about.html" class="menu-link" tabindex="-1">О нас</a>
+                    </li>
+                </ul>
+                <script type="text/javascript" src="scripts/button_menu.js"></script>
+            </div>
+        </div>
+    </header>    
+    <main>
+        <section class="contact-container">
+            <div class="contact_form">
+                <h2>Напишите нам</h2>
+                <form action="https://formspree.io/f/mwppzjvz" method="POST">
+                    <label>
+                        <input type="email" name="email" placeholder="Ваш email:" required>
+                    </label>
+                    <label>
+                        <textarea name="message" placeholder="Ваше сообщение:" required></textarea>
+                    </label>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <h2>Свяжитесь с нами</h2>
+                <p>Мы всегда рады помочь вам! Вы можете связаться с нами по следующим контактам:</p>
+                <ul>
+                    <li>Телефон: +7(800)123-12-23</li>
+                    <li>Email: vocrugsveta@mail.com</li>
+                    <li>Адрес: РФ, Ростов-на-Дону, Тургеневская 10/6, 344000</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+            <p>&copy; 2025 Вокруг света. Все права защищены.</p>
+    </footer>
+</body>
+</html>

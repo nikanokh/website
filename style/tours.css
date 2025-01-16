@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container__tours {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5em;
+    align-items: center;    
+}
+
+.card {
+    width: 100%;
+    max-width: 800px;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.tour__picture {
+    grid-column: 1;
+}
+
+.tour__description {
+    grid-column: 2;
+    padding: 1rem;
+}
+
+.info__banner {
+    grid-column: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #e9f5e9;
+    border-left: 2px solid #4CAF50;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.tour__description {
+    grid-column: 2;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    justify-content: flex-start; /* Выравнивание по верхнему краю */
+}
+
+.card__headline {
+    font-size: 24px;
+    font-weight: bold; /* Жирный шрифт */
+    color: #333;
+    margin-bottom: 5px; /* Отступ снизу для разделения с описанием */
+}
+
+.tour__features {
+    display: flex;
+    gap: 10px;
+    margin-top: auto;
+    color: #888; /* Серый цвет */
+    font-family: 'Verdana', sans-serif; /* Шрифт для особенностей */
+}
+
+.date {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 5px;
+    align-self: flex-start; 
+}
+
+.price {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: auto; 
+}
+
+.btn-details {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-details:hover {
+    background-color: #45a049;
+}

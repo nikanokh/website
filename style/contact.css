@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Две колонки */
+    gap: 20px; /* Отступ между колонками */
+}
+
+.contact_form {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contact-info {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.contact_info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact_info li {
+    margin: 5px 0;
+}
+
+.contact_form label {
+    display: block;
+    margin-bottom: 10px; /* Небольшой отступ между label */
+}
+
+.contact_form input[type="email"],
+.contact_form textarea {
+    width: 100%;
+    padding: 15px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact_form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact_form button:hover {
+    background-color: #45a049;
+}
+
+.contact-info {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-info:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.contact-info h2 {
+    color: #4CAF50;
+    margin-bottom: 10px;
+    font-size: 24px;
+    text-align: center;
+}
+
+.contact-info p {
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s;
+}
+
+.contact-info li:hover {
+    background-color: #e9f5e9; /* Цвет при наведении */
+    cursor: pointer;
+}
+
+.contact-info li strong {
+    color: #4CAF50; /* Цвет для выделения текста */
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+}

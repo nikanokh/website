@@ -28,7 +28,6 @@ body {
 }
 
 .header {
-    
     background-color: #4CAF50; /* Зеленый фон */
     color: white; /* Белый текст */
     padding: 20px 0;
@@ -47,6 +46,7 @@ body {
 .logo {
     font-size: 2.5em; 
     font-weight: bold; 
+    color: #f0f0f0;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
 }
 
@@ -159,7 +159,7 @@ h3 {
 
 .list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(3, 1fr); 
     gap: 20px;
     padding: 10px;
 }
@@ -194,94 +194,72 @@ h3 {
 }
 
 .tourCard {
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    width: 400px; /* Ширина карточки */
+    height: 250px; /* Высота карточки */
+    border-radius: 8px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    background-color: white;
     transition: transform 0.3s;
-    max-width: 300px;
-    margin: 20px;
-    text-align: center;
-    aspect-ratio: 2 / 3;
-}
-
-.tourCard:hover {
-    transform: scale(1.1);
-}
-
-.modal {
-    display: none; /* Скрыто по умолчанию */
-    position: fixed; 
-    z-index: 1000; /* На переднем плане */
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto; /* Прокрутка, если нужно */
-    background-color: rgba(0, 0, 0, 0.7); 
-}
-
-.modal-content {
-    background-color: #fff;
-    margin: 15% auto; /* Центрирование */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Ширина модального окна */
-    max-width: 600px; /* Максимальная ширина */
-    border-radius: 10px; /* Закругленные углы */
-}
-
-.close-button {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close-button:hover,
-.close-button:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.picture {
-    height: 45%; 
-    overflow: hidden; 
 }
 
 .picture img {
-    width: 100%;
+    width: 120%;
     height: 100%;
-    border-bottom: 2px solid #4CAF50;
+    object-fit: cover; /* Обеспечивает заполнение карточки изображением */
+    transition: transform 0.3s; /* Плавный переход для изображения */
+}
+
+.tourCard:hover .picture img {
+    transform: scale(1.1); /* Увеличение изображения при наведении */
 }
 
 .headline {
-    display: block;
-    font-size: 1.5em;
+    position: absolute;
+    bottom: 40px; /* Расположение заголовка */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 24px;
     font-weight: bold;
-    margin: 15px 0;
-    color: #333;
+    color: white;
+    z-index: 1; /* Убедитесь, что заголовок выше других элементов */
+    transition: bottom 0.3s; /* Плавный переход для заголовка */
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7); /* Обводка текста */
 }
 
 .description {
-    display: block;
-    font-size: 0.9em;
-    color: #666;
-    padding: 0 15px;
-    margin-bottom: 15px;
+    position: absolute;
+    bottom: -100%; /* Скрываем описание за пределами карточки */
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон для описания */
+    padding: 10px 0;
+    transition: bottom 0.3s; /* Плавный переход для описания */
 }
 
-.contact_form {
+.tourCard:hover .description {
+    bottom: 0; /* Показываем описание при наведении */
+}
+
+.tourCard:hover .headline {
+    bottom: 80px; /* Поднимаем заголовок при наведении */
+}
+
+/* .contact_form {
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 500px;
     margin: 20px auto;
-}
+} */
 
-.contact_form form {
+/* .contact_form form {
     display: flex;
     flex-direction: column;
 }
@@ -293,9 +271,9 @@ label {
     align-items: center;
     margin-bottom: 15px;
     font-weight: bold;
-}
+} */
 
-input[type="email"],
+/* input[type="email"],
 textarea {
     flex: 1;
     padding: 10px;
@@ -310,9 +288,9 @@ input[type="email"]:focus,
 textarea:focus {
     border-color: #2E7D32;
     outline: none;
-}
+} */
 
-button {
+/* button {
     background-color: #4CAF50;
     color: white;
     padding: 10px;
@@ -325,7 +303,7 @@ button {
 
 button:hover {
     background-color: #2E7D32;
-}
+} */
 
 @media (max-width: 600px) {
     .contact_form {
@@ -403,6 +381,7 @@ button:hover {
 .footer h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
+    color: #f0f0f0;
 }
 
 .footer {

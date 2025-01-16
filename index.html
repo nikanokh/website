@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="туризм, турагенства, туры">
     <title>Вокруг света - тур агенство</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style/styles.css">
 </head>
 <body>
     <header class="header">
@@ -15,69 +15,33 @@
                 <button class="button" aria-expanded="false" aria-controls="list">Меню</button>  
                 <ul class="menu" id="list" aria-hidden="true">
                     <li class="menu-item">
-                        <a href="#about" class="menu-link" tabindex="-1">О нас</a>
+                        <a href="index.html" class="menu-link" tabindex="-1">Главная</a>
                     </li>
-                    <li>
-                        <a href="#tours" class="menu-link" tabindex="-1">Туры</a>
+                    <li class="menu-item">
+                        <a href="tours.html" class="menu-link" tabindex="-1">Туры</a>
                     </li>
-                    <li>
-                        <a href="#destinations" class="menu-link" tabindex="-1">Направления</a>
+                    <li class="menu-item">
+                        <a href="contact.html" class="menu-link" tabindex="-1">Контакты</a>
                     </li>
-                    <li>
-                        <a href="#contact" class="menu-link" tabindex="-1">Контакты</a>
+                    <li class="menu-item">
+                        <a href="about.html" class="menu-link" tabindex="-1">О нас</a>
                     </li>
                 </ul>
-                <script type="text/javascript" >
-                    const button = document.querySelector('.button');
-                    const menu = document.querySelector('.menu');
-                    const menuLinks = document.querySelectorAll('.menu-link');
-
-                    button.addEventListener('click', () => {
-                        button.classList.toggle('active');
-                        const isActive = button.classList.contains('active');
-                        button.setAttribute('aria-expanded', isActive);
-                        menu.setAttribute('aria-hidden', !isActive);
-                        
-                        menuLinks.forEach(link => link.setAttribute('tabindex', isActive ? '0' : '-1'));
-                        
-                        
-                        if (isActive) {
-                            menu.style.display = 'block'; 
-                            setTimeout(() => {
-                                menu.style.maxHeight = menu.scrollHeight + 'px'; 
-                            }, 10); 
-                        } else 
-                        {
-                            menu.style.maxHeight = '0'; 
-                            setTimeout(() => {
-                                menu.style.display = 'none'; 
-                            }, 500); 
-                        }
-                    });
-                </script>
+                <script type="text/javascript" src="scripts/button_menu.js"></script>
             </div>
         </div>
-    </header>
+    </header>                    
     <article class="article">
         <div class="stack">
             <div class="locality" id="destinations">
-                <h3>Россия</h3>
+                <h3>Все направления!!!</h3>
                 <div class="list">
                     <div class="tourCard">
                         <div class="picture">
                             <img src="https://www.advantour.com/img/russia/images/baikal.jpg" alt="">
                         </div>
                         <span class="headline">Байкал</span>
-                        <span class="description">Откройте для себя величие Байкала — самого глубокого озера в мире, окруженного живописными горами и уникальной флорой и фауной.</span>
-                        <!-- <button class="open-modal" data-tour="Байкал">Подробнее о Байкале</button>
-                        <div class="modal" id="modal">
-                            <div class="modal-content">
-                                <span class="close-button">&times;</span>
-                                <h2 id="modal-title">Название тура</h2>
-                                <p id="modal-description">Описание тура.</p>
-                            </div>
-                        </div> -->
-                        <script type="text/javascript" src="modal_window.js"></script>
+                        <span class="description">Откройте для себя величие Байкала — самого глубокого озера в мире, окруженного живописными горами и уникальной флорой и фауной.</span>  
                     </div>
                     <div class="tourCard" style="background-image: url()">
                         <div class="picture">
@@ -93,11 +57,6 @@
                         <span class="headline">Санкт-Петербург</span>
                         <span class="description">Исследуйте Санкт-Петербург, город с богатым культурным наследием, где величественные дворцы и каналы создают неповторимую атмосферу.</span>
                     </div>
-                </div>
-            </div>
-            <div class="locality" id="tours">
-                <h3>Европа</h3>
-                <div class="list">
                     <div class="tourCard">
                         <div class="picture">
                             <img src="https://mytravelry.com/ru/wp-content/uploads/sites/2/2017/01/COVER1.gif" alt="">
@@ -133,11 +92,6 @@
                         <span class="headline">Амстердам</span>
                         <span class="description">Исследуйте Амстердам, город с уникальной архитектурой, живописными каналами и богатой культурной жизнью, где каждый уголок полон вдохновения.</span>
                     </div>
-                </div>
-            </div>
-            <div class="locality">
-                <h3>Азия</h3>
-                <div class="list">
                     <div class="tourCard">
                         <div class="picture">
                             <img src="https://cms.enjourney.ru/upload/Jana/Japan/Japan1/Jap9.jpg" alt="">
@@ -162,44 +116,12 @@
                 </div>
             </div>
         </div>
-        <div class="contact_form">
-            <form
-            action="https://formspree.io/f/mwppzjvz"
-            method="POST"
-            >
-            <label>
-                <input type="email" name="email" placeholder="Your email:  ">
-            </label>
-            <label>
-                <textarea name="message" placeholder="Your message:"></textarea>
-            </label>
-            <!-- your other form fields go here -->
-            <button type="submit">Send</button>
-            </form>
+        <div class="map">
+            <iframe class="footer__map" src="https://yandex.com/map-widget/v1/?um=constructor%3A065ddafd3d78a96b22f3fe62512cba5015513a6b14be26a8a4b91b288910e5f6&amp;source=constructor" frameborder="0"></iframe>
         </div>
-    </article>
-    <footer class="footer" id="about">
-        
-        <div class="container">
-            <div class="about">
-                <h2>О нас</h2>
-                <p>Вокруг Света — это ваше надежное туристическое агентство, которое предлагает уникальные путешествия по самым красивым уголкам мира. Мы помогаем вам открыть новые горизонты и создать незабываемые воспоминания.</p>
-            </div>
-            <div class="contact">
-                <h2 id="contact">Контакты</h2>
-                <p>Email: info@vokrugsveta.com</p>
-                <p>Телефон: +7 (123) 456-78-90</p>
-            </div>
-            <div class="social">
-                <h2>Мы в социальных сетях</h2>
-                <a href="#" class="social-link">Facebook</a>
-                <a href="#" class="social-link">Instagram</a>
-                <a href="#" class="social-link">Twitter</a>
-            </div>
-            <div class="map">
-                <iframe class="footer__map" src="https://yandex.com/map-widget/v1/?um=constructor%3A065ddafd3d78a96b22f3fe62512cba5015513a6b14be26a8a4b91b288910e5f6&amp;source=constructor" frameborder="0"></iframe>
-            </div>
-        </div>
+    </article>            
+    <footer class="footer">
+        <p>&copy; 2025 Вокруг света. Все права защищены.</p>
     </footer>
 </body>
 </html>
@@ -209,3 +131,5 @@
 </div>
 <span class="headline"></span>
 <span class="description"></span> -->
+<!-- <p>Вокруг Света — это ваше надежное туристическое агентство, которое предлагает уникальные путешествия по самым красивым уголкам мира. Мы помогаем вам открыть новые горизонты и создать незабываемые воспоминания.</p> -->
+ 

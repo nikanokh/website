@@ -7,5 +7,20 @@ button.addEventListener('click', () => {
     const isActive = button.classList.contains('active');
     button.setAttribute('aria-expanded', isActive);
     menu.setAttribute('aria-hidden', !isActive);
+    
     menuLinks.forEach(link => link.setAttribute('tabindex', isActive ? '0' : '-1'));
+    
+    
+    if (isActive) {
+        menu.style.display = 'block'; 
+        setTimeout(() => {
+            menu.style.maxHeight = menu.scrollHeight + 'px'; 
+        }, 10); 
+    } else 
+    {
+        menu.style.maxHeight = '0'; 
+        setTimeout(() => {
+            menu.style.display = 'none'; 
+        }, 500); 
+    }
 });
