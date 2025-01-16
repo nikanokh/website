@@ -90,3 +90,48 @@ h2 {
     margin-right: 10px;
     color: #4CAF50; /* Цвет иконки */
 }
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .mission-content {
+        grid-template-columns: 1fr; 
+    }
+
+    .advantages {
+        grid-template-columns: 1fr; 
+    }
+
+    .advantage {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+}
+
+@media (max-width: 480px) {
+    .mission-description {
+        padding-right: 0; 
+    }
+
+    h2 {
+        font-size: 24px; 
+    }
+
+    .advantages {
+        gap: 10px; 
+    }
+
+    .advantage p {
+        font-size: 16px; 
+    }
+
+    .services p {
+        font-size: 14px; 
+    }
+
+    .services li {
+        font-size: 14px; 
+    }
+}

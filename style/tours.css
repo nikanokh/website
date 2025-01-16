@@ -108,3 +108,38 @@ img {
 .btn-details:hover {
     background-color: #45a049;
 }
+
+@media (max-width: 768px) {
+    .card {
+        grid-template-columns: 1fr; 
+        height: auto; 
+    }
+
+    .info__banner {
+        grid-column: 1; 
+        align-items: center; 
+        text-align: center; 
+    }
+
+    .tour__description {
+        padding: 1rem; 
+    }
+}
+
+@media (max-width: 480px) {
+    .card__headline {
+        font-size: 20px; 
+    }
+
+    .card__description {
+        font-size: 14px; 
+    }
+
+    .date, .price {
+        font-size: 12px; 
+    }
+
+    .btn-details {
+        padding: 8px 12px; 
+    }
+}

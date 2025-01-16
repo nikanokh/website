@@ -130,3 +130,36 @@ footer {
     background-color: #4CAF50;
     color: white;
 }
+
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr; 
+    }
+
+    .contact_form, .contact-info {
+        margin-bottom: 20px; 
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-info h2 {
+        font-size: 20px; 
+    }
+
+    .contact_form input[type="email"],
+    .contact_form textarea {
+        padding: 10px; 
+    }
+
+    .contact_form button {
+        padding: 8px; 
+    }
+
+    .contact-info li {
+        padding: 8px; 
+    }
+}
