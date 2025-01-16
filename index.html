@@ -10,7 +10,7 @@
     <header class="header">
         <div class="container">
             <h1 class="logo">Вокруг Света</h1>
-            <div>
+            <div class="navig">
                 <button class="button" aria-expanded="false" aria-controls="list">Меню</button>  
                 <ul class="menu" id="list" aria-hidden="true">
                     <li class="menu-item">
@@ -26,17 +26,32 @@
                         <a href="#contact" class="menu-link" tabindex="-1">Контакты</a>
                     </li>
                 </ul>
-                <script type="text/javascript">
+                <script type="text/javascript" >
                     const button = document.querySelector('.button');
                     const menu = document.querySelector('.menu');
                     const menuLinks = document.querySelectorAll('.menu-link');
-            
+
                     button.addEventListener('click', () => {
                         button.classList.toggle('active');
                         const isActive = button.classList.contains('active');
                         button.setAttribute('aria-expanded', isActive);
                         menu.setAttribute('aria-hidden', !isActive);
+                        
                         menuLinks.forEach(link => link.setAttribute('tabindex', isActive ? '0' : '-1'));
+                        
+                        
+                        if (isActive) {
+                            menu.style.display = 'block'; 
+                            setTimeout(() => {
+                                menu.style.maxHeight = menu.scrollHeight + 'px'; 
+                            }, 10); 
+                        } else 
+                        {
+                            menu.style.maxHeight = '0'; 
+                            setTimeout(() => {
+                                menu.style.display = 'none'; 
+                            }, 500); 
+                        }
                     });
                 </script>
             </div>
@@ -53,6 +68,15 @@
                         </div>
                         <span class="headline">Байкал</span>
                         <span class="description">Откройте для себя величие Байкала — самого глубокого озера в мире, окруженного живописными горами и уникальной флорой и фауной.</span>
+                        <!-- <button class="open-modal" data-tour="Байкал">Подробнее о Байкале</button>
+                        <div class="modal" id="modal">
+                            <div class="modal-content">
+                                <span class="close-button">&times;</span>
+                                <h2 id="modal-title">Название тура</h2>
+                                <p id="modal-description">Описание тура.</p>
+                            </div>
+                        </div> -->
+                        <script type="text/javascript" src="modal_window.js"></script>
                     </div>
                     <div class="tourCard" style="background-image: url()">
                         <div class="picture">
@@ -137,8 +161,24 @@
                 </div>
             </div>
         </div>
+        <div class="contact_form">
+            <form
+            action="https://formspree.io/f/mwppzjvz"
+            method="POST"
+            >
+            <label>
+                <input type="email" name="email" placeholder="Your email:  ">
+            </label>
+            <label>
+                <textarea name="message" placeholder="Your message:"></textarea>
+            </label>
+            <!-- your other form fields go here -->
+            <button type="submit">Send</button>
+            </form>
+        </div>
     </article>
     <footer class="footer" id="about">
+        
         <div class="container">
             <div class="about">
                 <h2>О нас</h2>
@@ -155,13 +195,16 @@
                 <a href="#" class="social-link">Instagram</a>
                 <a href="#" class="social-link">Twitter</a>
             </div>
+            <div class="map">
+                <iframe class="footer__map" src="https://yandex.com/map-widget/v1/?um=constructor%3A065ddafd3d78a96b22f3fe62512cba5015513a6b14be26a8a4b91b288910e5f6&amp;source=constructor" frameborder="0"></iframe>
+            </div>
         </div>
     </footer>
 </body>
 </html>
 
-<div class="picture">
+<!-- <div class="picture">
     <img src="" alt="">
 </div>
 <span class="headline"></span>
-<span class="description"></span>
+<span class="description"></span> -->
