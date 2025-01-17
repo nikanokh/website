@@ -164,10 +164,10 @@ h3 {
     padding: 10px;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
     .list {
         display: grid;
-        grid-template-columns: repeat(3, 1fr); 
+        grid-template-columns: repeat(2, 1fr); 
     }
     .tourCard {
         position: relative;
@@ -181,10 +181,18 @@ h3 {
     }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 900px) {
     .list {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); 
+        grid-template-columns: repeat(1, 1fr); 
+    }
+    .tourCard {
+        position: relative;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        transition: transform 0.3s;
     }
 }
 
@@ -195,6 +203,15 @@ h3 {
     .list {
         display: grid;
         grid-template-columns: 1fr; 
+    }
+    .tourCard {
+        position: relative;
+        width: 80%; 
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        background-color: white;
+        transition: transform 0.3s;
     }
 }
 
